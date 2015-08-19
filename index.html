@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" ng-app="app">
 
   <head>
     <meta charset="UTF-8">
@@ -15,10 +15,12 @@
 
     <script src="//cdn.bootcss.com/angular.js/1.4.4/angular.min.js"></script>
     <script src="//cdn.bootcss.com/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <link href="//cdn.bootcss.com/animate.css/3.4.0/animate.min.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class="container">
+    <div class="container animated fadeInUp">
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
@@ -34,9 +36,10 @@
         <h1>Congratulation<i class="fa fa-heart"></i></h1>
 
         <p class="lead">太棒了，你已经通过了第一关耶，去迎接接下来的挑战吧！</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">点我继续~</a></p>
+        <p><a class="btn btn-lg btn-primary" ui-sref="task2" role="button">点我继续~</a></p>
       </div>
 
+      <ui-view class="row marketing"></ui-view>
       <!-- <div class="row marketing">
         <div class="col-lg-6">
           <h4>Subheading</h4>
