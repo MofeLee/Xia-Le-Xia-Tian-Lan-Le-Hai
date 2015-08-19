@@ -1,53 +1,59 @@
-<div class="jumbotron">
-  <h1>Congratulation~<i class="fa fa-smile-o"></i></h1>
+<div class="animated fadeIn">
+  <div class="jumbotron">
+    <h1>Congratulation~
+      <i class="fa fa-smile-o"></i>
+    </h1>
 
-  <p class="lead">太棒了，你已经通过了第一关耶，去迎接接下来的挑战吧！</p>
-  <p><a class="btn btn-lg btn-primary" ui-sref="task2" role="button">点我继续~</a></p>
-</div>
+    <p class="lead">太棒了，你已经通过了第一关耶，去迎接接下来的挑战吧！</p>
+    <p>
+      <a class="btn btn-lg btn-primary" role="button" ui-sref="task2">点我继续~</a>
+    </p>
+  </div>
 
-<div class="animated flash">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">关卡2</h3>
-    </div>
-    <div class="panel-body">
-      <p>
-        <i class="fa fa-check"></i>
-        完成啦~
-      </p>
+  <div class="animated flash">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">关卡2</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <i class="fa fa-check"></i>
+          完成啦~
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="animated bounceIn">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">关卡3</h3>
-    </div>
-    <div class="panel-body">
-      <form class="form-horizontal">
-        <fieldset>
-          <legend>密文：16238742925<button class="btn btn-link pull-right" ng-click="vm.tishi()">给个提示？</button></legend>
-          <div class="form-group">
-            <!-- <label class="col-lg-2 control-label" for="inputEmail">answer</label> -->
-            <div class="col-lg-10">
-              <input class="form-control"
-                placeholder="把解密出来的答案填这里"
-                ng-model="vm.answer"
-                style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;" type="text">
+  <div class="animated bounceIn">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">关卡3</h3>
+      </div>
+      <div class="panel-body">
+        <form class="form-horizontal">
+          <fieldset>
+            <legend>密文：16238742925
+              <button class="btn btn-link pull-right" ng-click="vm.tishi()">给个提示？</button>
+            </legend>
+            <div class="form-group">
+<!-- <label class="col-lg-2 control-label" for="inputEmail">answer</label> -->
+              <div class="col-lg-10">
+                <input class="form-control" ng-model="vm.answer" placeholder="把解密出来的答案填这里" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;" type="text">
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-              <p>
-                {{ vm.answer }}
-              </p>
-              <button class="btn btn-primary" ng-click="vm.tijiao(vm.answer)" type="submit">试试对不对？</button>
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+                <p>
+                  {{ vm.answer }}
+                </p>
+                <button class="btn btn-primary" ng-click="vm.tijiao(vm.answer)" type="submit">试试对不对？</button>
+              </div>
             </div>
-          </div>
-        </fieldset>
-      </form>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>
+
 </div>

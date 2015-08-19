@@ -114,14 +114,13 @@ angular.module('app', [
                   text: '通关啦~~~'
                 };
                 swal(obj, function(){
-                  alert(123);
+                  showSomeThing();
 
                   $rootScope.$state.go('finished');
                 });
                 // sweetAlert('密码正确', '通关啦~~~', 'success', function(){
                 //   alert(123);
                 // });
-                $rootScope.$state.go('finished');
               } else{
                 sweetAlert('出错了', '这个密码是错的，试试别的吧', 'error');
               }
@@ -153,3 +152,7 @@ angular.module('app', [
     }
   ]
 );
+
+function showSomeThing(){
+  alert(456);
+}
