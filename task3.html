@@ -10,9 +10,6 @@
     </p>
   </div> -->
 
-  <div class="progress progress-striped active">
-    <div class="progress-bar" style="width: 67%"></div>
-  </div>
   <div class="animated flash">
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -36,7 +33,9 @@
         <form class="form-horizontal">
           <fieldset>
             <legend>
-              <button class="btn btn-link pull-right" ng-click="vm.tishi()">给个提示？</button>
+              <button type="button" class="btn btn-link pull-right" data-toggle="modal" data-target="#myModal3">
+                给个提示？
+              </button>
               密文：16238742925
             </legend>
             <div class="form-group">
@@ -57,4 +56,24 @@
     </div>
   </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">提示</h4>
+      </div>
+      <div class="modal-body">
+        <h3>密钥：你的手机号码<h3>
+        <h3>加密方式：一次性密码本</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
