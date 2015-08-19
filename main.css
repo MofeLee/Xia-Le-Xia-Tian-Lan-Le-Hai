@@ -80,7 +80,7 @@ body {
 
 #heart {
   color: red;
-  font-size: 108px;
+  /*font-size: 108px;*/
   display: table;
   width: auto;
   margin-left: auto;
