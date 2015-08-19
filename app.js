@@ -154,5 +154,9 @@ angular.module('app', [
 );
 
 function showSomeThing(){
-  alert(456);
+  alert('恭喜通关~');
+  alert('这是为你私人定制的解密游戏');
+  alert('虽然不像样，但很特别对吧');
+  alert('特立独行的礼物得送给独一无二的人');
+  alert('Have fun~');
 }
