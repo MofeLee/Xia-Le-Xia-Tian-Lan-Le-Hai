@@ -49,7 +49,16 @@ angular.module('app', [
 
         .state("home", {
           url: "/",
-          template: ''
+          template: '<div class="jumbotron animated fadeInRight">'+
+          '<h1>Congratulation~<i class="fa fa-smile-o"></i></h1>'+
+          '<p class="lead">太棒了，你已经通过了第一关耶，去迎接接下来的挑战吧！</p>'+
+          '<p><a class="btn btn-lg btn-primary" ui-sref="task2" role="button">点我继续~</a></p>'+
+          '</div>'
+        })
+
+        .state("finished", {
+          url: "/finished",
+          templateUrl: 'finished.html'
         })
 
         .state("task2", {
@@ -83,11 +92,39 @@ angular.module('app', [
         .state("task3", {
           url: "/3-final",
           templateUrl: 'task3.html',
-          controller: function(){
+          controller: function($rootScope){
             var vm = this;
+            vm.answer = '';
+
+            vm.tishi = function(){
+              var obj = {
+                title: '提示',
+                type: 'info',
+                text: '密钥：你的手机号码~ 加密方式：一次性密码本'
+              };
+              swal(obj);
+            };
 
             vm.tijiao = function(str){
-              alert(str);
+              str = str.toLowerCase();
+              if(str === '359545139' || str === '00359545139'){
+                var obj = {
+                  title: '密码正确',
+                  type: 'success',
+                  text: '通关啦~~~'
+                };
+                swal(obj, function(){
+                  alert(123);
+
+                  $rootScope.$state.go('finished');
+                });
+                // sweetAlert('密码正确', '通关啦~~~', 'success', function(){
+                //   alert(123);
+                // });
+                $rootScope.$state.go('finished');
+              } else{
+                sweetAlert('出错了', '这个密码是错的，试试别的吧', 'error');
+              }
             };
           },
           controllerAs: 'vm'
