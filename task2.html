@@ -7,9 +7,9 @@
 
       <form class="form-horizontal">
         <fieldset>
-          <legend>密码：abcdef  <button class="btn btn-link pull-right" onclick="alert('key:-.-.  .-  .  ...  .-  .-.  -....');">给个提示？</button></legend>
+          <legend>密文：UXGTMKPAOIK  <button class="btn btn-link pull-right" ng-click="vm.tishi()">给个提示？</button></legend>
           <div class="form-group">
-            <label class="col-lg-2 control-label" for="inputEmail">answer</label>
+            <!-- <label class="col-lg-2 control-label" for="inputEmail">answer</label> -->
             <div class="col-lg-10">
               <input class="form-control"
                 placeholder="把解密出来的答案填这里"
@@ -21,9 +21,9 @@
           <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
               <p>
-                {{ answer }}
+                {{ vm.answer }}
               </p>
-              <button class="btn btn-primary" ng-click="vm.tijiao(vm.answer)">试试对不对？</button>
+              <button class="btn btn-primary" ng-click="vm.tijiao(vm.answer)" type="submit">试试对不对？</button>
             </div>
           </div>
         </fieldset>

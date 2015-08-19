@@ -55,11 +55,27 @@ angular.module('app', [
         .state("task2", {
           url: "/2",
           templateUrl: 'task2.html',
-          controller: function(){
+          controller: function($rootScope){
             var vm = this;
+            vm.answer = '';
 
-            this.tijiao = function(str){
-              alert(str);
+            vm.tishi = function(){
+              var obj = {
+                title: '提示',
+                type: 'info',
+                text: '加密方式:-.-.  .-  .  ...  .-  .-.  -....'
+              };
+              swal(obj);
+            };
+
+            vm.tijiao = function(str){
+              str = str.toLowerCase();
+              if(str === 'orangejuice'){
+                sweetAlert('密码正确', '你太棒了~继续加油吧，还有最后一关啦', 'success');
+                $rootScope.$state.go('task3');
+              } else{
+                sweetAlert('出错了', '这个密码是错的，试试别的吧', 'error');
+              }
             };
           },
           controllerAs: 'vm'
@@ -70,7 +86,7 @@ angular.module('app', [
           controller: function(){
             var vm = this;
 
-            this.tijiao = function(str){
+            vm.tijiao = function(str){
               alert(str);
             };
           },
