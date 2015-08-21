@@ -19,6 +19,8 @@ angular.module('app', [
       /////////////////////////////
       // Redirects and Otherwise //
       /////////////////////////////
+      $urlRouterProvider
+        .otherwise('/');
 
       $stateProvider
 
